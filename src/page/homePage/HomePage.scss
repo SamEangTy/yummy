@@ -1,0 +1,32 @@
+.homepage{
+    position: relative;
+    background-color: #eeeeee;
+    height: 100vh;
+    display: flex;
+    .text{
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        .wrapper{
+            width: 500px;
+            // height: 300px;
+            background-color: greenyellow;
+        }
+    }
+    .img{
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        // background-color: yellow;
+        .wrapper{
+            width: 500px;
+            background-color: greenyellow;
+        }
+    }
+}

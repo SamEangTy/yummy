@@ -1,0 +1,90 @@
+.topbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    background-color: #FFFFFF;
+    .containerLogo{
+        a{
+            text-decoration: none;
+            color: black;
+            h1{
+                font-size: 35px;
+            }
+            span{
+                color: red;
+            }
+        }
+    }
+    .containerMenu{
+        display: flex;
+        ul{
+            list-style: none;
+            display: flex;
+                
+            li{
+             
+                .active{
+                    border-bottom: 2px solid red;
+                }
+                padding: 30px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    display: inline-block;
+                }
+                // a:focus{
+                //     border-bottom: 2px solid red;
+                // }
+                a::after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: red;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform .3s;
+                }
+                a:hover::after{
+                    transform-origin: left;
+                    transform: scaleX(1);
+                }
+                .dropdown{
+                    // color: red;
+                    .icon{
+                        position: absolute;
+                        top: 10px;
+                        font-size: 15px;
+                        margin-left: 3px;
+                    }
+                
+                }
+            }
+        }
+    }
+    .containerBook{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .book{
+            text-decoration: none;
+            color: white;
+            background-color: red;;
+            border-radius: 50px;
+            padding: 8px 20px;
+            p{
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+            }
+        }
+        
+    }
+}
