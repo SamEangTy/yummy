@@ -77,13 +77,17 @@
             background-color: red;;
             border-radius: 50px;
             padding: 8px 20px;
+            cursor: pointer;
             p{
                 display: flex;
                 text-align: center;
                 align-items: center;
                 justify-content: center;
-
             }
+        }
+        .book:hover{
+            background-color: red;
+            opacity: 0.8;
         }
         
     }
