@@ -4,6 +4,10 @@
     align-items: center;
     height: 90px;
     background-color: #FFFFFF;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
     .containerLogo{
         a{
             text-decoration: none;
@@ -26,13 +30,19 @@
              
                 .active{
                     border-bottom: 2px solid red;
+                    color: black;
                 }
                 padding: 30px;
                 a{
                     text-decoration: none;
-                    color: black;
+                    color: rgba(0, 0, 0, 0.422);
                     position: relative;
                     display: inline-block;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                .notactive{
+                    border-bottom: 2px solid rgba(109, 109, 109, 0.568);
                 }
                 // a:focus{
                 //     border-bottom: 2px solid red;

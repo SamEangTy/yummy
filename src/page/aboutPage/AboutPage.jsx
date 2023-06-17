@@ -2,7 +2,7 @@ import './AboutPage.scss'
 import {MessageTwoTone, PlayCircleFilled, PlayCircleOutlined, PlayCircleTwoTone} from '@ant-design/icons'
 export default function AboutPage() {
   return (
-    <div className='aboutpage'>
+    <div className='aboutpage' id='about'>
         <div className="header">
         <h6>about us</h6>
         <h2>learn more <span>ABOUT US</span></h2>

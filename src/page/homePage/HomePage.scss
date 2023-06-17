@@ -4,6 +4,7 @@
     height: 100vh;
     display: flex;
     overflow: hidden;
+    top: 90px;
     .text{
         flex: 6;
         display: flex;
@@ -22,6 +23,7 @@
             }
             .btn{
                 display: flex;
+                border: none;
                 .btnbook{
                     margin-right: 10px;
                     background-color: rgb(170, 0, 0);
@@ -55,11 +57,27 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        // background-color: yellow;
         .wrapper1{
-            width: 500px;
-            // background-color: greenyellow;
-           
+            // width: 500px;
+            position: relative;
+            // animation-name: example;
+            // animation-duration: 1s;
+            // animation-iteration-count: infinite;
+            animation: example 20s linear infinite;
         }
+        @keyframes example {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            // 0%   { transform: rotate(72deg);}
+            // 25%  {transform: rotate(144deg);}
+            // 50%  { transform: rotate(216deg);}
+            // 75%  {transform: rotate(288deg);}
+            // 100% { transform: rotate(360deg);}
+            // 75% { transform: rotate(288deg);}
+          }
     }
 }

@@ -1,37 +1,87 @@
-import { NavLink } from 'react-router-dom'
+
 import './TopBar.scss'
 import {Dropdown} from 'antd'
 import {DownOutlined} from '@ant-design/icons'
+import { useState } from 'react'
 export default function TopBar() {
-  const items: MenuProps['items'] = [
+  const [indexSelected, setIndexSelected] = useState(0)
+  const items = [
   {
     key: '1',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-        1st menu item
+      <a target="_self" rel="noopener noreferrer" href="home">
+       Home
       </a>
     ),
   },
   {
     key: '2',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-        2nd menu item
+      <a target="_self" rel="noopener noreferrer" href="#home">
+       Home
       </a>
     ),
   },
   {
     key: '3',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-        3rd menu item
+      <a target="_self" rel="noopener noreferrer" href="home">
+        Home
       </a>
     ),
   },
 ];
-  // const hndleMenu = ()=>{
-  //   alert("eys")
-  // }
+  const linkPage = [
+    {
+      id:"1",
+      name:"Home",
+      idpage:"#home"
+    },
+    {
+      id:"2",
+      name:"About",
+      idpage:"#about"
+    },
+    {
+      id:"3",
+      name:"Menu",
+      idpage:"#menu"
+    },
+    {
+      id:"4",
+      name:"Events",
+      idpage:"#event"
+    },
+    {
+      id:"5",
+      name:"Chefs",
+      idpage:"#chef"
+    },
+    {
+      id:"6",
+      name:"Gallery",
+      idpage:"#gallery"
+    },
+  ] 
+  const handleClick = (index)=>{
+    setIndexSelected(index)
+    console.log(index);
+  }
+  const onScrolling = ()=>{
+    const scroll = document.documentElement.scrollTop
+    if(scroll <= 828.4){
+      setIndexSelected(0)
+    }
+    if(scroll >= 828.4){
+      setIndexSelected(1)
+
+    }
+    if( scroll >= 2660){
+      setIndexSelected(2)
+      
+    }
+  }
+  window.addEventListener('scroll',onScrolling)
   return (
     <div className='topbar'>
       <div className="containerLogo">
@@ -41,18 +91,22 @@ export default function TopBar() {
       </div>
       <nav className='containerMenu'>
       <ul>
-          <li><NavLink to={"/"}>Home</NavLink></li>
-          <li><NavLink to={"/about"}>About</NavLink></li>
-          <li><NavLink to={"/menu"}>Menu</NavLink></li>
+          {linkPage.map((l,index)=>{
+            return(
+              <li key={index}><a href={l.idpage} onClick={()=>handleClick(index)} className={indexSelected === index ? "active" : "unknow"} >{l.name}</a></li>
+            )
+          })}
+          {/* <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
           <li><NavLink to={"/event"}>Events</NavLink></li>
           <li><NavLink to={"/chefs"}>Chefs</NavLink></li>
-          <li><NavLink to={"/gallery"}>Gallery</NavLink></li>
+          <li><NavLink to={"/gallery"}>Gallery</NavLink></li> */}
           
           <Dropdown menu={{ items }} className='dropdown' placement="bottom" arrow>
-              <li><NavLink to={"/dropdown"} className='dropdown'>Dropdown<DownOutlined className='icon'/></NavLink></li>
+              <li><a className='dropdown' href='#contact'>Dropdown<DownOutlined className='icon'/></a></li>
           </Dropdown>
-          
           <li><a href="#contact">Contact</a></li>
+          
         </ul>
       </nav>
       <div className='containerBook'>
