@@ -5,6 +5,7 @@ import TopBar from './page/topBar/TopBar.jsx';
 import HomePage from './page/homePage/HomePage';
 import AboutPage from './page/aboutPage/AboutPage';
 import MenuPage from './page/menuPage/MenuPage';
+import FooterPage from './page/footerPage/FooterPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </Routes> */}
       <AboutPage/>
       <MenuPage/>
+      <FooterPage/>
     </BrowserRouter>
   );
 }

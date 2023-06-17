@@ -69,13 +69,13 @@ export default function MenuPage() {
                 })}
             </div>
         </div>
+              {/* <Carousel style={{width:"100px",display:"flex"}}> */}
           <div className="footer">
             <div className="wrapper">
               <div className="header">
                 <p>TESTIMONIALS</p>
                 <h2>WHAT ARE THEY <span style={{color:"red"}}>Saying About Us</span></h2>
               </div>
-              {/* <Carousel style={{width:"100px",display:"flex"}}> */}
               <div className="box">
                 <div className="txt">
                   <p>
@@ -95,9 +95,9 @@ export default function MenuPage() {
                   <img src="img/testimonials/testimonials-2.jpg" alt="" />
                 </div>
               </div>
-              {/* </Carousel> */}
             </div>
           </div>
+              {/* </Carousel> */}
 
                 <Carousel autoplay>
                 <div>
