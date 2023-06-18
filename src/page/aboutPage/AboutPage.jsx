@@ -1,13 +1,19 @@
 import './AboutPage.scss'
-import {MessageTwoTone, PlayCircleFilled, PlayCircleOutlined, PlayCircleTwoTone} from '@ant-design/icons'
+import {MessageTwoTone, PlayCircleFilled,} from '@ant-design/icons'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 export default function AboutPage() {
+  useEffect(()=>{
+    AOS.init({duration: 2000})
+  },[])
   return (
     <div className='aboutpage' id='about'>
-        <div className="header">
+        <div className="header" data-aos="fade-up">
         <h6>about us</h6>
         <h2>learn more <span>ABOUT US</span></h2>
         </div>
-        <div className="wrapper">
+        <div className="wrapper" data-aos="fade-up">
 
         <div className="topleft">
           <div className="img">
@@ -44,7 +50,7 @@ export default function AboutPage() {
           </div>
         </div>
         </div>
-        <div className="footer">
+        <div className="footer" data-aos="fade-up">
           <div className="footerleft">
             <div className="covertxt">
 
@@ -61,21 +67,21 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="footerright">
-            <div className="branding">
+            <div className="branding" data-aos="fade-up">
+              <div className="brand" >
+                <MessageTwoTone className='icon'/>
+                <h4>Corporis voluptates officia eiusmod</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, debitis vel magnam suscipit nobis officia praesentium, </p>
+              </div>
+            </div>
+            <div className="branding" data-aos="fade-up">
               <div className="brand">
                 <MessageTwoTone className='icon'/>
                 <h4>Corporis voluptates officia eiusmod</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, debitis vel magnam suscipit nobis officia praesentium, </p>
               </div>
             </div>
-            <div className="branding">
-              <div className="brand">
-                <MessageTwoTone className='icon'/>
-                <h4>Corporis voluptates officia eiusmod</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, debitis vel magnam suscipit nobis officia praesentium, </p>
-              </div>
-            </div>
-            <div className="branding">
+            <div className="branding" data-aos="fade-up">
               <div className="brand">
                 <MessageTwoTone className='icon'/>
                 <h4>Corporis voluptates officia eiusmod</h4>

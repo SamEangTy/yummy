@@ -47,21 +47,21 @@ export default function TopBar() {
       name:"Menu",
       idpage:"#menu"
     },
-    {
-      id:"4",
-      name:"Events",
-      idpage:"#event"
-    },
-    {
-      id:"5",
-      name:"Chefs",
-      idpage:"#chef"
-    },
-    {
-      id:"6",
-      name:"Gallery",
-      idpage:"#gallery"
-    },
+    // {
+    //   id:"4",
+    //   name:"Events",
+    //   idpage:"#event"
+    // },
+    // {
+    //   id:"5",
+    //   name:"Chefs",
+    //   idpage:"#chef"
+    // },
+    // {
+    //   id:"6",
+    //   name:"Gallery",
+    //   idpage:"#gallery"
+    // },
   ] 
   const handleClick = (index)=>{
     setIndexSelected(index)
@@ -105,7 +105,7 @@ export default function TopBar() {
           <Dropdown menu={{ items }} className='dropdown' placement="bottom" arrow>
               <li><a className='dropdown' href='#contact'>Dropdown<DownOutlined className='icon'/></a></li>
           </Dropdown>
-          <li><a href="#contact">Contact</a></li>
+          {/* <li><a href="#contact">Contact</a></li> */}
           
         </ul>
       </nav>

@@ -1,3 +1,4 @@
+
 .footerpage{
     background-color: #1F1F24;
     height: 370px;
@@ -29,6 +30,7 @@
                 .icon{
                     position: absolute;
                     top: 0;
+                    color: white;
                     // left: 0;
                 //    padding: 20px;
                 }
@@ -36,7 +38,19 @@
                     position: absolute;
                     top: 10px;
                     margin-left: 50px;
-                    
+                    .multiicon{
+                        display: flex;
+                        // justify-content: space-between;
+                        gap: 10px;
+                        // background-color: red;
+                        .icon1{
+                            padding: 5px;
+                            border: 1px solid white;
+                            border-radius: 50%;
+                            font-size: 35px;
+                            // color: white;
+                        }
+                    }
                     h2{
                         font-size: 18px;
                         font-weight: bold;
@@ -45,8 +59,11 @@
                         margin: 0;
                         padding: 0;
                         font-size: 18px;
+                        opacity: .7;
+                        
                     }
                     span{
+                        opacity: .7;
                         font-size: 18px;
                     }
                 }
@@ -57,6 +74,16 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            p{
+                font-size: 16px;
+                padding: 0;
+                margin: 0;
+                opacity: .7;
+                span{
+                    font-weight: bold;
+                }
+            }
+            
         }
     }
 }
