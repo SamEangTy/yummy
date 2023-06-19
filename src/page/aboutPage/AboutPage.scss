@@ -1,3 +1,4 @@
+@import "../../global.scss";
 .aboutpage{
     // height: 100vh;
     // padding: 50px;
@@ -25,6 +26,9 @@
     .wrapper{
         display: flex;
         padding: 70px;
+        @include mobile{
+            flex-direction: column;
+        }
         .topleft{
             flex: 6;
             display: flex;
@@ -33,7 +37,9 @@
             position: relative;
             .img{
                 width: 90%;
-
+                @include mobile{
+                    width: 100%;
+                }
                 img{
                     height: 800px;
                     width: 100%;
@@ -50,6 +56,10 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                @include mobile{
+                    width: 300px;
+                    height: 100px;
+                }
                 h2{
                     font-size: 26px;
                     font-weight: bold;
@@ -72,9 +82,14 @@
                 flex-direction: column;
                 width: 90%;
                 padding: 10px 30px;
+                @include mobile{
+                    width: 130%;
+                }
             }
             .img1{
-                
+                @include mobile{
+                    width: 130%;
+                }
                 position: relative;
                 .icon{
                     position: absolute;
@@ -100,12 +115,16 @@
         background-color: #eeeeee;
         display: flex;
         padding: 80px;
+        @include mobile{
+            padding: 0;
+            flex-direction: column;
+        }
         .footerleft{
             flex: 4;
             display: flex;
             justify-content: center;
-            align-items: c;
-            // background-color: red;
+            align-items: center;
+                
             .covertxt{
                 width: 80%;
                 background-color: rgb(200, 25, 25);
@@ -149,6 +168,11 @@
             display: flex;
             padding: 50px;
             justify-content: space-around;
+            @include mobile{
+                padding: 10px 10px;
+            //    margin-bottom: 50px;
+                // background-color: red;
+            }
             .branding{
                 width: 30%;
                 background-color: white;
@@ -157,18 +181,34 @@
                 align-items: center;
                 text-align: center;
                 transition: all .3s ease;
+               
                 .brand{
                     padding: 12px 25px;
+                    @include mobile{
+                        padding: 0;
+                    }
                     .icon{
                         margin-bottom: 20px;
                         font-size: 50px;
+                        @include mobile{
+                            font-size: 23px;
+                        }
                     }
                     h4{
                         font-size: 23px;
                         margin-bottom: 20px;
+                        @include mobile{
+                            font-size: 12px;
+                        }
+                    }
+                    p{
+                        font-size: 18px;
+                       @include mobile{
+                        font-size: 12px;
+                       }
                     }
                   
-                }
+                    }
             }
             .branding:hover{
                 transform: scale(1.1);

@@ -1,6 +1,5 @@
 
 import { BrowserRouter } from 'react-router-dom';
-import './App.css';
 import TopBar from './page/topBar/TopBar.jsx';
 import HomePage from './page/homePage/HomePage';
 import AboutPage from './page/aboutPage/AboutPage';

@@ -53,7 +53,6 @@ export default function AboutPage() {
         <div className="footer" data-aos="fade-up">
           <div className="footerleft">
             <div className="covertxt">
-
             <div className="txt">
               <h2>Why Choose</h2>
               <h2>Yummy?</h2>

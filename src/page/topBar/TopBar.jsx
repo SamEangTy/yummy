@@ -3,6 +3,7 @@ import './TopBar.scss'
 import {Dropdown} from 'antd'
 import {DownOutlined} from '@ant-design/icons'
 import { useState } from 'react'
+import MenuIcon from '@mui/icons-material/Menu';
 export default function TopBar() {
   const [indexSelected, setIndexSelected] = useState(0)
   const items = [
@@ -111,9 +112,9 @@ export default function TopBar() {
       </nav>
       <div className='containerBook'>
         <div className='book'>
-
         <span>Book a Table</span>
         </div>
+        <MenuIcon className='menuicon'/>
       </div>
     </div>
   )
