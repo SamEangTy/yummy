@@ -39,7 +39,7 @@ export default function MenuPage() {
             <li key={index}>
               <button
                 onClick={() => filterItems(categery, index)}
-                className={indexSelected === index ? "active" : "notactive"}
+                className={ indexSelected === index ? "active" : "notactive"}
               >
                 {categery}
               </button>

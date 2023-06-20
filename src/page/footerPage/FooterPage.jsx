@@ -55,7 +55,7 @@ export default function FooterPage() {
             <hr />
         <div className="copyright">
             <p>© Copyright <span>Yummy</span>. All Rights Reserved</p>
-            <p>Designed by <span>BootstrapMade</span></p>
+            <p>Develop by <span>Sam EangTy</span></p>
         </div>
       </div>
     </div>

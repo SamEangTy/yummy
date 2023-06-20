@@ -4,6 +4,7 @@
     // padding: 50px;
     // overflow: hidden;
     // box-sizing: border-box;
+    // width: 100%;
     position: relative;
     top: 90px;
     .header{
@@ -44,6 +45,9 @@
                     height: 800px;
                     width: 100%;
                     object-fit: cover;
+                    @include mobile{
+                        height: 400px;
+                    }
                 }
             }
             .coverimg{
@@ -57,12 +61,15 @@
                 justify-content: center;
                 flex-direction: column;
                 @include mobile{
-                    width: 300px;
-                    height: 100px;
+                    width: 200px;
+                    height: 70px;
                 }
                 h2{
                     font-size: 26px;
                     font-weight: bold;
+                    @include mobile{
+                       font-size: 18px;
+                    }
                     span{
                         color:red;
                     }
@@ -116,8 +123,9 @@
         display: flex;
         padding: 80px;
         @include mobile{
-            padding: 0;
+            padding: 20px 0px;
             flex-direction: column;
+            height: 1000px;
         }
         .footerleft{
             flex: 4;

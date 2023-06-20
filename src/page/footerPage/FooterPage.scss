@@ -1,4 +1,4 @@
-
+@import "../../global.scss";
 .footerpage{
     background-color: #1F1F24;
     height: 370px;
@@ -9,40 +9,49 @@
     top: 90px;
     justify-content: center;
     // align-items: center;
+    @include mobile{
+        height: auto;
+        // flex-direction: column;
+    }
     .wrapper{
         // background-color: green;
         width: 90%;
+        @include mobile{
+            width: 100%;
+        }
         .boxfooter{
             width: 100%;
             display: flex;
             // background-color: red;
+            @include mobile{
+                flex-direction: column;
+            }
             .box{
                 margin: 50px;
                 height: 100px;
                 display: flex;
                 width: 25%;
-                // background-color: red;
-                // justify-content: center;
-                // flex-direction: column;
                 align-items: center;
-                // text-align: center;
                 position: relative;
+                @include mobile{
+                   margin: 10px 0 0 0;
+                }
                 .icon{
                     position: absolute;
                     top: 0;
                     color: white;
-                    // left: 0;
-                //    padding: 20px;
                 }
                 .txt{
                     position: absolute;
                     top: 10px;
                     margin-left: 50px;
+                    @include mobile{
+                        width: 250px;
+                        // background-color: red;
+                    }
                     .multiicon{
                         display: flex;
-                        // justify-content: space-between;
                         gap: 10px;
-                        // background-color: red;
                         .icon1{
                             padding: 5px;
                             border: 1px solid white;

@@ -1,22 +1,17 @@
 
 import './TopBar.scss'
-import {Dropdown} from 'antd'
+import {Dropdown, Menu} from 'antd'
 import {DownOutlined} from '@ant-design/icons'
 import { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 export default function TopBar() {
   const [indexSelected, setIndexSelected] = useState(0)
+  const [menu, setMenu] = useState(false)
+  console.log(menu);
   const items = [
   {
     key: '1',
-    label: (
-      <a target="_self" rel="noopener noreferrer" href="home">
-       Home
-      </a>
-    ),
-  },
-  {
-    key: '2',
     label: (
       <a target="_self" rel="noopener noreferrer" href="#home">
        Home
@@ -24,10 +19,18 @@ export default function TopBar() {
     ),
   },
   {
+    key: '2',
+    label: (
+      <a target="_self" rel="noopener noreferrer" href="#about">
+      About
+      </a>
+    ),
+  },
+  {
     key: '3',
     label: (
-      <a target="_self" rel="noopener noreferrer" href="home">
-        Home
+      <a target="_self" rel="noopener noreferrer" href="#menu">
+       Menu
       </a>
     ),
   },
@@ -114,7 +117,22 @@ export default function TopBar() {
         <div className='book'>
         <span>Book a Table</span>
         </div>
-        <MenuIcon className='menuicon'/>
+        <div onClick={()=>setMenu(!menu)} className='menuicon'>
+        {menu ? <CloseIcon/> : <MenuIcon/>}
+        </div>
+        <div className={menu ? "active" : "notactive"}>
+        <Menu
+            defaultSelectedKeys={['1']}
+            // defaultOpenKeys={['sub1']}
+            // style={{height:"100vh",fontSize:"23px",}}
+            className='menu'
+            mode="inline"
+            theme="dark"
+            // inlineCollapsed={menu}
+            items={menu ? items : menu}
+            onClick={()=>setMenu(false)}
+          />
+        </div>
       </div>
     </div>
   )

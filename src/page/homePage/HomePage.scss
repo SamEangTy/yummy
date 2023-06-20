@@ -5,8 +5,10 @@
     height: 100vh;
     display: flex;
     overflow: hidden;
+    // width: 100%;
     top: 90px;
     @include mobile {
+        // width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -19,9 +21,15 @@
         text-align: center;
         align-items: center;
         justify-content: center;
-
+        @include mobile{
+            width: 100%;
+        }
         .wrapper{
             width: 500px;
+            // width: 100%;
+            @include mobile{
+                width: 100%;
+            }
             h3{
                 margin-bottom: 20px;
                 @include mobile{
